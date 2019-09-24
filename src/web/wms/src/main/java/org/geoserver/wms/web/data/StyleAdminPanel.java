@@ -292,7 +292,7 @@ public class StyleAdminPanel extends StyleEditTabPanel {
         fileUploadField.setDefaultModel(new Model<String>(""));
         add(fileUploadField);
 
-        add(previewLink());
+        add(previewLink(styleModel));
 
         legendContainer = new WebMarkupContainer("legendContainer");
         legendContainer.setOutputMarkupId(true);
@@ -338,7 +338,7 @@ public class StyleAdminPanel extends StyleEditTabPanel {
         stylePage.editor.getFeedbackMessages().clear();
     }
 
-    protected Component previewLink() {
+    protected Component previewLink(IModel<StyleInfo> styleModel) {
         return new GeoServerAjaxFormLink("preview", stylePage.styleForm) {
 
             private static final long serialVersionUID = 7404304424029960594L;
@@ -354,7 +354,7 @@ public class StyleAdminPanel extends StyleEditTabPanel {
                 // Generate the legend
 
                 // Try External Legend
-                URLConnection conn = legendPanel.getExternalGraphic(target, form);
+                URLConnection conn = legendPanel.getExternalGraphic(target, form, styleModel);
                 String onlineResource = legendPanel.getOnlineResource();
                 if (onlineResource != null && !onlineResource.isEmpty()) {
                     if (conn != null) {
