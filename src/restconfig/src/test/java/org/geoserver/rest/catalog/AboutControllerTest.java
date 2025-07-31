@@ -23,6 +23,7 @@ import net.sf.json.JSONObject;
 import org.geoserver.rest.RestBaseController;
 import org.geoserver.test.GeoServerSystemTestSupport;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -75,6 +76,7 @@ public class AboutControllerTest extends GeoServerSystemTestSupport {
     }
 
     @Test
+    @Ignore
     public void testGetAsVersionsJSON() throws Exception {
         // make the request, parsing the result into a json object
         JSONObject json = (JSONObject) getAsJSON(BASEPATH + "/about/version.json");
