@@ -126,7 +126,7 @@
     <gf.version>3.8.1</gf.version>
     <mf.version>2.3.3</mf.version>
     <jasypt.version>1.9.3</jasypt.version>
-    <hibernate-version>5.6.15.Final</hibernate-version>
+    <hibernate-version>5.3.20.Final</hibernate-version>
     <opengeo-geodb.version>0.9</opengeo-geodb.version>
     <!-- NOTE: be careful if upgrading log4j, check transitive slf4j with netcdf and netcdf-out -->
     <log4j.version>2.24.3</log4j.version>
